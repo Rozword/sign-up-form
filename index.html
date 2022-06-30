@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="left">
+            <div id="odin">Odin</div>
+        </div>
+        <div id="right">
+            <div>
+                <p>We know you want to keep up to date with Odin's crazy daily adventures!</p>
+                <p>Sing up now!</p>
+            </div>
+            <div>
+                <form action="">
+                    <legend>Let's do this!</legend>
+                    <div id="">                        
+                        <div>
+                            <label for="fname">First Name</label><br>
+                            <input type="text" name="fName" id="fName" required>
+                        </div>
+                        <div>
+                            <label for="lName">Last Name</label><br>
+                            <input type="text" name="lName" id="lName" required>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="email">Email</label><br>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div>
+                            <label for="tel">Phone Number</label><br>                        
+                            <input type="tel" name="tel" id="tel">
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="pass">Password</label><br>
+                            <input type="password" name="pass" id="pass" minlength="4" required>
+                        </div>
+                        <div>
+                            <label for="confirmPass">Confirm Password</label><br>
+                            <input type="password" name="confirmPass" id="confirmPass" minlength="4" required>
+                        </div>
+                    </div>  
+            </div>
+            <div>
+                    <input type="submit" name="submit" id="submit" value="Create Account">
+                </form>
+                <p>Already have an account? <a href="">Log in</a> </p>
+            </div>
+        </div>
+        
+
+
+    </div>
+</body>
+</html>
