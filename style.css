@@ -1,7 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+
+:root{
+    --headings:1.8rem;
+    --text:0.9rem;
+    --font: 'Gochi Hand', cursive;
+}
+
+
+
 body{
     display: flex;
     justify-content: center;
-    background-color: rgb(26, 26, 26)
+    background-color: rgb(26, 26, 26);
+    margin: 0px
 }
 #wrapper{
     display: flex;
@@ -13,8 +25,9 @@ body{
 }
 
 #right{
-    background-color: lightgrey;
+    background-color: rgba(195, 255, 203, 0.582);
     width: 60%;
+    overflow: hidden;
 }
 
 #left{    
@@ -26,36 +39,170 @@ body{
     display: flex;
     justify-content: center;
     position: relative;
+    overflow: hidden;
 }
 
 #odin{
-    font-size: 4rem;
-    color: lightgrey;
+    font-family: var(--font);
+    font-size: 5rem;
+    color: white;
     position: absolute;
-    top: 150px;
-    background-color: rgba(0, 0, 0, 0.8);    
-    width: 100%;
+    top: 180px;
+    background-color: rgba(0, 0, 0, 0.6);    
+    width: 120%;
     text-align: center;
+    transform: rotate(-12deg);
+    border: 8px solid rgba(102, 211, 102, 0.6);
+    
+    
+}
+#odin+span{
+    position: relative
+}
+#odin+span::before{
+    content: url(odin-logo-nobgx.png);
+    height:100px ;
+    width: 100px;
+    position: absolute;
+    top: 170px;
+    right: 110px;
 }
 
-form>div{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-#right>div{
+#right>div:nth-child(odd){
     height: 33%;
 }
 
+
 #right>div:nth-child(2){
-    background-color: white;
+    height: 32%;
+    background-color: rgb(230, 255, 227);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 8px 8px 2px rgba(0, 0, 0, 0.5);
 }
 #right>div:nth-child(1){
     text-align: center;
     font-size: 2rem;
+    padding: 20px
 }
 
 input:invalid{
-    border: 3px solid red;
+    border: 1px dashed rgba(255, 0, 0, 0.445);
 }
+
+#divForm{   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+    margin-left: 50px;  
+}
+
+
+.formSection{    
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    gap: 60px;
+    height: 65px;
+}
+
+p, legend{
+    font-size: var(--headings);
+    font-family: var(--font);
+}
+label{
+    font-size: var(--text);
+    font-family: var(--font);
+}
+input{
+   
+   width: 250px;
+   height: 25px;
+   font-size: 1.4rem;
+   border-radius: 8px;
+   border-color: rgba(97, 97, 97, 0.205);   
+   font-family: var(--font);
+   background-color: rgba(255, 255, 255, 0.4);
+   box-shadow: 8px 10px 8px rgba(0, 0, 0, 0.5);
+}
+
+input[type=submit]{
+    position: relative;
+    height: 50px;
+    font-size: 1.9rem;
+    background-color: rgba(30, 78, 30, 0.719);
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 8px 10px 8px rgba(0, 0, 0, 0.6);
+}
+input[type=submit]:focus{
+    height: 50px;
+    width: 250px;
+    border: none;
+    box-shadow: none;
+    position: relative;
+    top: 8px;
+    left: 8px;
+    
+}
+    
+
+
+input+span{
+    position: relative;
+}
+input+span::before{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0.5px; 
+    left: 8px;   
+}
+input:invalid+ span::before{
+    content: url(error.svg);
+
+}
+input:valid + span::before{
+    content: url(checked.svg);
+    
+}
+
+
+input:focus{
+    outline: none;
+    border:3px solid rgb(108, 214, 179);
+    position: relative;
+    top: 8px;
+    left: 8px;
+    box-shadow: none;       
+
+}
+input:focus+ span::before{
+    top: 8px;
+    left: 8px;
+}
+
+
+#right>div:nth-child(3){
+    margin-top: 30px;
+    margin-left: 50px;
+    overflow: hidden;
+}
+.footer{
+    font-size:1.2rem;
+}
+
+#right>div:nth-child(3){
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: rgba(30, 78, 30, 0.719);
+    font-weight: bold;
+}
+
+
