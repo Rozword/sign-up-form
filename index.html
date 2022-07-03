@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up form</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    
 
 </head>
 <body>
@@ -21,56 +21,59 @@
                 <p>We know you want to keep up to date with Odin's crazy daily adventures!</p>
                 <p><strong>Sing up now!</strong></p>
             </div>
-            <div>
-                <form action="">
+            <div id="formSpace">
+                <div id="success"> Thank you for subscribing!</div>
+                <form action="" target="frame">
                 <div id="divForm">
                     <legend>Let's do this!</legend>
+                    <p>Required fields are marked by <abbr title="required"> *</abbr></p>
                     
                     <div class="formSection">                        
                         <div>
-                            <label for="fname">First Name</label><br>
+                            <label id="fLabel" for="fname">First Name <abbr title="required" aria-label="required"> *</abbr></label><br>
                             <input type="text" name="fName" id="fName" required>
                             <span></span>
                         </div>
                         <div>
-                            <label for="lName">Last Name</label><br>
+                            <label id="lLabel" for="lName">Last Name</label><br>
                             <input type="text" name="lName" id="lName" >
                         </div>
                     </div>
                     <div class="formSection">
                         <div>
-                            <label for="email">Email</label><br>
+                            <label id="eLabel" for="email">Email<abbr title="required" aria-label="required"> *</abbr></label><br>
                             <input type="email" name="email" id="email" required>
                             <span></span>
                         </div>
                         <div>
-                            <label for="tel">Phone Number</label><br>                        
+                            <label id="tLabel" for="tel">Phone Number</label><br>                        
                             <input type="tel" name="tel" id="tel">
                         </div>
                     </div>
                     <div class="formSection">
                         <div>
-                            <label for="pass">Password</label><br>
-                            <input type="password" name="pass" id="pass" minlength="4" required>
+                            <label id="passLabel" for="pass">Password<abbr title="required" aria-label="required"> *</abbr></label><br>
+                            <input type="password" name="pass" id="pass" minlength="4" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required placeholder="1 lowercase, 1 uppercase and 1 number">
                             <span></span>
                         </div>
                         <div>
-                            <label for="confirmPass">Confirm Password</label><br>
-                            <input type="password" name="confirmPass" id="confirmPass" minlength="4" required>
+                            <label id="confirmPassLabel" for="confirmPass">Confirm Password<abbr title="required" aria-label="required">*</abbr></label><br>
+                            <input type="password" name="confirmPass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" id="confirmPass" minlength="4" required>
                             <span></span>
+                            <p>Password must be at least 1 capital letter, 1 non-capital letter and 1 number</p>
                         </div>
                     </div>  
                 </div>
+                
             </div>
             <div>
-                    <input type="submit" name="submit" id="submit" value="Create Account">
+                    <input type="submit" name="submit" id="sub" value="Create Account">
                 </form>
-                <p class="footer">Already have an account? <a href="">Log in</a> </p>
+                <p class="footer">Already have an account? <button id="log" href=""> Log in</button> </p>
             </div>
-        </div>
-        
-
-
+        </div>    
     </div>
+    <iframe name="frame"></iframe>
+    <script src="script.js"></script>
 </body>
 </html>

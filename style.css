@@ -3,7 +3,7 @@
 
 :root{
     --headings:1.8rem;
-    --text:0.9rem;
+    --text:1.2rem;
     --font: 'Gochi Hand', cursive;
 }
 
@@ -69,29 +69,33 @@ body{
 }
 
 #right>div:nth-child(odd){
-    height: 33%;
+    height: 30%;
 }
 
 
 #right>div:nth-child(2){
-    height: 32%;
+    height: 35%;
     background-color: rgb(230, 255, 227);
     display: flex;
     flex-direction: column;
     justify-content: center;
     box-shadow: 0px 8px 8px 2px rgba(0, 0, 0, 0.5);
+    overflow: auto;
+
 }
 #right>div:nth-child(1){
     text-align: center;
     font-size: 2rem;
-    padding: 20px
+    padding: 20px;
+    overflow: auto;
 }
 
 input:invalid{
     border: 1px dashed rgba(255, 0, 0, 0.445);
 }
 
-#divForm{   
+#divForm{  
+    position: relative; 
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -99,6 +103,12 @@ input:invalid{
     margin-left: 50px;  
 }
 
+#divForm>p{
+    margin: 0;
+    font-size: 1rem;
+    position: absolute;
+    top: 35px;
+}
 
 .formSection{    
     display: flex;
@@ -112,6 +122,10 @@ p, legend{
     font-size: var(--headings);
     font-family: var(--font);
 }
+legend{
+    margin-bottom: 20px;
+}
+
 label{
     font-size: var(--text);
     font-family: var(--font);
@@ -125,7 +139,7 @@ input{
    border-color: rgba(97, 97, 97, 0.205);   
    font-family: var(--font);
    background-color: rgba(255, 255, 255, 0.4);
-   box-shadow: 8px 10px 8px rgba(0, 0, 0, 0.5);
+   box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
 }
 
 input[type=submit]{
@@ -184,6 +198,9 @@ input:focus+ span::before{
     top: 8px;
     left: 8px;
 }
+::placeholder{
+    font-size: 15px;
+}
 
 
 #right>div:nth-child(3){
@@ -199,10 +216,38 @@ input:focus+ span::before{
     overflow: hidden;
 }
 
-a{
+button{
     text-decoration: none;
     color: rgba(30, 78, 30, 0.719);
     font-weight: bold;
+    font-family: var(--font);
+    font-size: var(--text);
+    background: none;	
+	border: none;
+	padding: 0;
+	
+	cursor: pointer;
+	
+}
+
+abbr{
+    text-decoration: none;
+}
+
+#success{
+    width: 0px;
+    height: 0px;
+    font-size: 0px;    
+    font-family: var(--font);
+    text-align: center;
+
+
+
+    
+
+}
+iframe{
+    display: none;
 }
 
 
